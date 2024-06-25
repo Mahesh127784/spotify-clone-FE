@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Dancing+Script&family=Fuggles&family=Kenia&family=Montserrat:wght@100&family=Roboto+Mono&family=Source+Code+Pro:ital,wght@1,200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <img class="logo" src="images/Spotify_Logo_RGB_Green.png" alt="" />
+        <li>Home</li>
+        <li>Local</li>
+        <li>Favorites</li>
+        <li>About</li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="songlist">
+        <h1>Best songs-Music to your ears ---></h1>
+        <div class="songContainer">
+          <!-- <div class="songItem">
+            <img src="images/zalma.jpg" alt="1" />
+            <span class="songlistplay">
+              <i class="far songIcons fa-play-circle"></i
+            ></span>
+            <span class="songname">Zalimaa...from Raeez</span>
+            <span class="timespan">05:06</span>
+          </div> -->
+        </div>
+      </div>
+      <div class="songbanner"></div>
+    </div>
+
+    <div class="bottom">
+      <input
+        type="range"
+        name="range"
+        value="0"
+        id="myProgressBar"
+        min="0"
+        max="100"
+      />
+      <div class="icons">
+        <i class="fas fa-3x fa-step-backward" id="previous"></i>
+        <i class="far fa-3x fa-play-circle" id="Playbar"></i>
+        <i class="fas fa-3x fa-step-forward" id="forward"></i>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/26504e4a1f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>

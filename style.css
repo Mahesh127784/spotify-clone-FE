@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Dancing+Script&family=Fuggles&family=Kenia&family=Montserrat:wght@100&family=Roboto+Mono&family=Source+Code+Pro:ital,wght@1,200&display=swap'); */
+
+html,
+body {
+  background-color: antiquewhite;
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  height: auto;
+  font-family: "Roboto Mono";
+  background-color: black;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  color: rgb(152, 155, 242);
+  align-items: center;
+  gap: 25px;
+  height: 60px;
+  font-size: 18px;
+  font-weight: 900;
+  padding: 10px;
+  margin-left: 40px;
+}
+
+ul li {
+  border-radius: 15px;
+  padding: 5px 10px;
+  /* background-color: green; */
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: rgba(48, 46, 47, 0.597);
+}
+
+.logo {
+  height: 35px;
+}
+
+.container {
+  height: 72vh;
+  background-color: black;
+  color: white;
+  font-family: "Baloo Bhai 2";
+  margin: 18px auto;
+  width: 75%;
+  border-radius: 15px;
+  padding: 10px 20px;
+  display: flex;
+  background-image: url("images/bg2..jpg");
+  /* background-position: center; */
+  background-size: 100% 100%;
+}
+
+/* vh - in css is percentage if hight this will occupie in a view screean */
+.bottom {
+  color: white;
+  position: sticky;
+  height: 100px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  bottom: 0;
+}
+
+#myProgressBar {
+  width: 75vw;
+  scroll-behavior: smooth;
+}
+
+.icons {
+  font-size: 10px;
+}
+
+.icons i {
+  margin: 0px 5px;
+}
+
+.icons i:hover {
+  cursor: pointer;
+}
+
+.songlist h1 {
+  display: inline;
+  color: white;
+}
+
+.songItem {
+  height: auto;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.31);
+  align-items: center;
+  width: 600px;
+  border-radius: 20px;
+  gap: 20px;
+  margin: 10px;
+}
+
+.gif {
+  width: 100px;
+  position: absolute;
+  left: 630px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+.songItem img {
+  border-radius: 20px;
+  height: 40px;
+  /* width: 150px; */
+}
+
+.songlistplay i {
+  cursor: pointer;
+  font-size: 25px;
+  margin-left: -10px;
+}
+
+.songContainer {
+  margin-top: 30px;
+}
