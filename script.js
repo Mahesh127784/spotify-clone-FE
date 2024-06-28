@@ -60,35 +60,40 @@ let songs = [
 let songsContainer = document.querySelector(".songContainer"); //song info container bar
 let playbar = document.querySelector("#Playbar"); //Main play botton
 let mybar = document.querySelector("#myProgressBar"); //progress bar
-let song1 = new Audio(songs[0].song);
 let previous = document.querySelector("#previous"); //Previous Button
 let forward = document.querySelector("#forward"); //Forward button
 let gif = document.getElementsByClassName("gif");
 
-function songsBox(songs) {
-  let songsHTML = "";
+//audio tag craetion
+let song1 = new Audio(songs[0].song);
 
-  songs.forEach((song, i) => {
-    songsHTML += `<div class="songItem">
-    <img src="${song.Image}" alt="1" />
-    <span class="songlistplay">
-    <i class="far songIcons fa-play-circle"></i>
-    </span>
-    <span class="songname">${song.songsname}</span>
-    <span class="timespan">${song.time}</span>
-   <img src="images/gif.gif" class="gif" alt="" />
-    </div>`;
-  });
+// function to generate the HTML for the song list
+function songsBox(songs) {
+  let songsHTML = songs
+    .map((song, i) => {
+      return `<div class="songItem">
+        <img src="${song.Image}" alt="1" />
+        <span class="songlistplay">
+          <i class="far songIcons fa-play-circle" data-index="${i}"></i>
+        </span>
+        <span class="songname">${song.songsname}</span>
+        <span class="timespan">${song.time}</span>
+        <img src="images/gif.gif" class="gif" alt="" />
+      </div>`;
+    })
+    .join("");
 
   songsContainer.innerHTML = songsHTML;
 }
 
 songsBox(songs);
+console.log(songs[0].song, "okok", song1.src);
 
 //find the index of currenltly playing or paused song
 function pausedSongIndex() {
   return songs.findIndex((song) => song.song === song1.attributes.src.value);
 }
+
 //main play button
 playbar.addEventListener("click", () => {
   songplay(pausedSongIndex());
@@ -139,7 +144,7 @@ mybar.addEventListener("change", () => {
   song1.currentTime = newTime;
 });
 
-//Listener to all song icons to play specifically cliked
+//Listener to all song icons to play specifically cliked song
 let songIcon = document.getElementsByClassName("songIcons");
 Array.from(songIcon).forEach((element, i) => {
   element.addEventListener("click", function (e) {
